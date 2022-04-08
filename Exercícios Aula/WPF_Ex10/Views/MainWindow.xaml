@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF_Ex10.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Gestão de Inscrições de Alunos" Height="400" Width="360">
+    <Grid>
+        <Menu HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="360">
+            <MenuItem Header="Ficheiro" Height="30" Width="100">
+                <MenuItem Header="Ler" HorizontalAlignment="Left" Height="30" Width="140">
+                    <MenuItem Header="Alunos" HorizontalAlignment="Left" Height="30" Width="140">
+                        <MenuItem Header="XML" HorizontalAlignment="Left" Height="32" Width="140" Click="MenuItem_AbrirXML_Click" />
+                        <MenuItem Header="Texto" HorizontalAlignment="Left" Height="32" Width="140" Click="MenuItem_AbrirTXT_Click" />
+                    </MenuItem>
+                    <MenuItem Header="Cursos" Height="30" Width="140" Click="ReadCursos_Click"/>
+                </MenuItem>
+                <MenuItem Header="Guardar" HorizontalAlignment="Left" Height="30" Width="140">
+                    <MenuItem Header="Alunos" Height="30" Width="140">
+                        <MenuItem Header="XML" HorizontalAlignment="Left" Height="32" Width="140" Click="MenuItem_GuardarXML_Click"/>
+                        <MenuItem Header="Texto" HorizontalAlignment="Left" Height="30" Width="140" Click="MenuItem_GuardarTXT_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Cursos" Height="30" Width="140" Click="SaveCurso_Click"/>
+                </MenuItem>
+                <MenuItem Header="Adicionar" Height="30" Width="140">
+                    <MenuItem Header="Aluno" Height="30" Width="140" Click="AddAluno_Click"/>
+                    <MenuItem Header="Curso" Height="30" Width="140" Click="AddCurso_Click"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TreeView x:Name="tvAlunos" HorizontalAlignment="Center" Margin="0,30,0,10" Width="340" SelectedItemChanged="TvAlunos_SelectedItemChanged" />
+    </Grid>
+</Window>

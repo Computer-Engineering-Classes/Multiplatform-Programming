@@ -1,0 +1,33 @@
+﻿<Window x:Class="Ex9e10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:Ex9e10.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
+        mc:Ignorable="d"
+        Title="RSS Reader" Height="530" Width="620" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,26,0,0" Text="RSS Feed" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="79,23,0,0" VerticalAlignment="Top" Width="511"
+                  ItemsSource="{Binding Model.Canais}" SelectedItem="{Binding SelectedCanal}" DisplayMemberPath="Link"/>
+        <StackPanel Margin="10,50,10,335">
+            <TextBlock Height="30" Text="{Binding SelectedCanal.Titulo}"/>
+            <TextBlock Height="30" Text="{Binding SelectedCanal.Descricao}"/>
+            <TextBlock Height="30" Text="{Binding SelectedCanal.Link}"/>
+        </StackPanel>
+        <ListView Margin="10,166,10,158" ItemsSource="{Binding SelectedCanal.Noticias}" SelectedItem="{Binding SelectedNoticia}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Titulo" Width="193" DisplayMemberBinding="{Binding Titulo}"/>
+                    <GridViewColumn Header="URL" Width="193" DisplayMemberBinding="{Binding Link}"/>
+                    <GridViewColumn Header="Data" Width="193" DisplayMemberBinding="{Binding Data}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock Text="{Binding SelectedNoticia.Descricao}" Margin="10,368,74,10" TextWrapping="WrapWithOverflow"/>
+        <Button HorizontalAlignment="Left" Margin="551,368,0,0" VerticalAlignment="Top" Height="136" Width="59" Click="Button_Click">
+            <TextBlock Text="Abrir no Browser" TextAlignment="Center" TextWrapping="WrapWithOverflow"/>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Lista de navegadores de internet -->
+<Browsers>
+  <browser>
+    <Nome>Edge</Nome>
+    <Info>2015</Info>
+  </browser>
+  <browser>
+    <Nome>Safari</Nome>
+    <Info>2003</Info>
+  </browser>
+</Browsers>

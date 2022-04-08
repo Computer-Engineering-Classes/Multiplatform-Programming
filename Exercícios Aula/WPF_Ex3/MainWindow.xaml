@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPF_Ex3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Ex3"
+        mc:Ignorable="d"
+        Title="WPF App 3" Height="388" Width="618">
+    <Grid>
+        <Menu VerticalAlignment="Top" Height="20">
+            <MenuItem Header="Figuras" Height="20" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <MenuItem Name="FigurasAdicionar" Header="Acrescentar" Click="FigurasAdicionar_Click"/>
+                <Separator/>
+                <MenuItem Name="FigurasSair" Header="Sair" Click="FigurasSair_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock Text="Descrição:" HorizontalAlignment="Left" Margin="43,112,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="lbFiguras" HorizontalAlignment="Left" Height="151" Margin="39,159,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBlock Text="Representação:" HorizontalAlignment="Left" Margin="349,112,0,0" VerticalAlignment="Top"/>
+        <Canvas Name="canvasRepresentacao" HorizontalAlignment="Left" Height="151" Margin="349,159,0,0" VerticalAlignment="Top" Width="202"/>
+    </Grid>
+</Window>

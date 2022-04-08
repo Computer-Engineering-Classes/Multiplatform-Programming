@@ -1,0 +1,13 @@
+﻿<Window x:Class="WPF_Ex10.Views.AddCourseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Adicionar Curso" Height="150" Width="400">
+    <Grid>
+        <TextBox  x:Name="TbName" HorizontalAlignment="Left" Margin="116,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="142" Height="27"/>
+        <TextBlock Text="Nome:" HorizontalAlignment="Left" Margin="44,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Width="40"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.333,-0.218" Height="27" Width="60" Click="BtAdd_Click"/>
+    </Grid>
+</Window>
